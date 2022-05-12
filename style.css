@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #282c34;
+}
+
+header {
+  background-color: #20232a;
+  width: 100vw;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8% 0 8%;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+#headerNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+#returnFromProjects {
+  position: absolute;
+  right: 8%;
+  display: none;
+  cursor: pointer;
+}
+
+#returnFromProjects:hover {
+  color: #2dc2ef;
+}
+
+.sectionWrappers {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  padding: 8% 8% 8% 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionTitles {
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+  position: relative;
+}
+
+.projects {
+  margin-top: 1%;
+  width: 20vw;
+  height: 15vw;
+  background-color: #282c34;
+  position: relative;
+  border: #484848 2px solid;
+}
+
+.projects:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: .5s;
+  transition: .5s;
+  border: white 2px solid;
+}
+
+#project1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#10234f), to(#2e688f));
+  background-image: linear-gradient(90deg, #10234f, #2e688f 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#project1::after {
+  content: 'FizzBuzz';
+  font-size: 1.5rem;
+  color: white;
+}
+
+#projectCarousel {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projectDisplay {
+  width: 100vw;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectDisplayActive {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-animation: expand_project1;
+          animation: expand_project1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.projectHeaders {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  opacity: 0;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  -webkit-animation: project_title 2s;
+          animation: project_title 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.projectTitles {
+  font-size: 2rem;
+}
+
+#fizzBuzzData {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 45%;
+  position: absolute;
+  top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  gap: 2%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fizzdata 2s;
+          animation: fizzdata 2s;
+  background-color: #ffffff1c;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#fizzBuzzData p {
+  font-size: .8rem;
+}
+
+.fizzBuzzInput {
+  width: 100px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#fizzButtonWrapper {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#fizzButton {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .3rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#fizzButton:hover {
+  background-color: #c3c3c3;
+}
+
+#outputFizzBuzz {
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  word-wrap: break-word;
+  padding: 10px;
+  background-color: #282c34de;
+  color: white;
+  margin-top: 20px;
+  font-size: .8rem;
+  border-radius: 8px;
+}
+
+@-webkit-keyframes expand_project1 {
+  from {
+    height: 0px;
+    background-color: #2f8aae;
+  }
+  100% {
+    height: 100%;
+    background-color: #2f8aae;
+  }
+}
+
+@keyframes expand_project1 {
+  from {
+    height: 0px;
+    background-color: #2f8aae;
+  }
+  100% {
+    height: 100%;
+    background-color: #2f8aae;
+  }
+}
+
+@-webkit-keyframes project_title {
+  from {
+    opacity: 0;
+    left: -5%;
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  100% {
+    opacity: 1;
+    left: 8%;
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+
+@keyframes project_title {
+  from {
+    opacity: 0;
+    left: -5%;
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  100% {
+    opacity: 1;
+    left: 8%;
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+
+@-webkit-keyframes fizzdata {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50vw);
+            transform: translateX(50vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+}
+
+@keyframes fizzdata {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50vw);
+            transform: translateX(50vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sectionWrappers {
+    padding: 8% 5% 8% 5%;
+  }
+  #projectCarousel {
+    gap: 3%;
+  }
+  .projects {
+    width: 42vw;
+    height: 25vw;
+    margin-top: 3%;
+    background-color: #282c34;
+    position: relative;
+  }
+  #fizzBuzzData {
+    width: 85%;
+  }
+  #sectionOneWrapper {
+    height: 550px;
+  }
+  #outputFizzBuzz {
+    width: 95%;
+    font-size: .7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

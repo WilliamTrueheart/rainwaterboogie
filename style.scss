@@ -1,0 +1,257 @@
+$primaryText: rgb(255, 255, 255);
+$primaryColor:#20232a;
+$primaryColorLight:#282c34; 
+
+
+* {
+    padding:0;
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primaryColorLight;
+}
+
+header {
+    background-color: $primaryColor;
+    width:100vw;
+    height:60px;
+    display:flex;
+    align-items: center;
+    padding: 0 8% 0 8%;
+}
+
+header a {
+    text-decoration: none;
+    color:$primaryText;
+}
+
+#headerNav {
+    display: flex;
+    align-items: center;
+    color:$primaryText;
+}
+
+#returnFromProjects {
+    position: absolute;
+    right:8%;
+    display: none;
+    cursor: pointer;
+    &:hover {
+    color:rgb(45, 194, 239);
+    }
+}
+
+
+.sectionWrappers {
+    width:100%;
+    height:500px;
+    background-color: rgb(0, 0, 0);
+    padding: 8% 8% 8% 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sectionTitles {
+    color:$primaryText;
+    font-size: 1rem;
+    font-weight: 100;
+    position: relative;
+}
+
+.projects {
+    margin-top: 1%;
+    width:20vw;
+    height:15vw;
+    background-color: #282c34;
+    position: relative;
+    border:rgb(72, 72, 72) 2px solid;
+    &:hover {
+        transform: scale(1.02);
+        transition: .5s;
+        border:white 2px solid;
+    }
+}
+
+
+
+#project1 {
+    background-image: linear-gradient(90deg, rgb(16, 35, 79), rgb(46, 104, 143) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+        content:'FizzBuzz';
+        font-size: 1.5rem;
+        color:white;
+    }
+}
+
+#projectCarousel {
+    margin-top: 2rem;
+    display: flex;
+    gap:1%;
+    flex-wrap: wrap;
+}
+
+.projectDisplay {
+    width:100vw;
+    height:0px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    display: none;
+    justify-content: center;
+
+}
+
+.projectDisplayActive {
+    width:100vw;
+    position: absolute;
+    bottom:0;
+    display: flex;
+    left:0;
+    animation: expand_project1;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+.projectHeaders {
+    width: max-content;
+    opacity:0;
+    position: absolute;
+    left:5%;
+    top:10%;
+    animation: project_title 2s;
+    animation-fill-mode: forwards;
+}
+
+.projectTitles {
+    font-size: 2rem;
+}
+
+#fizzBuzzData {
+    height: max-content;
+    width:45%;
+    position: absolute;
+    top:30%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap:2%;
+    justify-content: center;
+    & p {
+        font-size: .8rem;
+    }
+    animation: fizzdata 2s;
+    background-color: #ffffff1c;
+    padding:20px;
+    border-radius: 8px;
+}
+
+.fizzBuzzInput {
+    width:100px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#fizzButtonWrapper {
+    width:100%;
+    margin-top: 20px;
+}
+
+#fizzButton {
+    width:max-content;
+    padding: .3rem;
+    border-radius: 8px;
+    border:none;
+    cursor: pointer;
+    &:hover {
+        background-color: #c3c3c3;
+    }
+}
+
+#outputFizzBuzz {
+    width:70vw;
+    height:max-content;
+    word-wrap: break-word;
+    padding:10px;
+    background-color: #282c34de;
+    color:white;
+    margin-top: 20px;
+    font-size: .8rem;
+    border-radius: 8px;
+}
+
+@keyframes expand_project1 {
+    from {
+        height:0px;
+        background-color: rgb(47, 138, 174);
+    }
+    100% {
+        height:100%;
+        background-color: rgb(47, 138, 174);
+    }
+}
+
+
+@keyframes project_title {
+    from {
+        opacity: 0;
+        left:-5%;
+        transform: skewX(0deg);
+    }
+    100% {
+        opacity: 1;
+        left:8%; 
+        transform: skewX(0deg);
+    }
+}
+
+@keyframes fizzdata {
+    from {
+        opacity: 0;
+        transform: translateX(50vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+
+
+
+@media screen and (max-width: 900px)  {
+
+    .sectionWrappers {
+        padding: 8% 5% 8% 5%;
+    }
+
+    
+    #projectCarousel {
+    gap:3%;
+    }
+
+    .projects {
+        width:42vw;
+        height:25vw;
+        margin-top: 3%;
+        background-color: #282c34;
+        position: relative;
+    }
+    
+    #fizzBuzzData {
+        width:85%;   
+    }
+    #sectionOneWrapper {
+        height: 550px;
+    } 
+    #outputFizzBuzz {
+        width:95%;
+        font-size: .7rem;
+    }
+}

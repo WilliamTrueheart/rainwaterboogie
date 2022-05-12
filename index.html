@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="headerNav">
+            <a href="#">WILL NEWTON</a>
+            <div id="returnFromProjects" onclick="returnFromProjects()">
+            return to main page
+            </div>
+        </nav>
+    </header>
+    <div class="sectionWrappers" id="sectionOneWrapper">
+        <h2 class="sectionTitles" id="title_AnimationProjects">mini-projects </h2>
+            <div id="projectCarousel">
+                <div onclick="expand_Project(1)" id="project1" class="projects">
+
+                </div>
+                <div onclick="expand_Project(2)" id="project2" class="projects">
+
+                </div>
+                <div onclick="expand_Project(3)" id="project3" class="projects">
+
+                </div>
+                <div onclick="expand_Project(4)" id="project4" class="projects">
+
+                </div>
+            </div>    
+            <div id="projectDisplay_1" class="projectDisplay">
+                <div id="projectHeader1" class="projectHeaders">
+                    <h3 id="projectTitle_1" class="projectTitles"></h3>
+                    <h4 id="projectDesc_1" class="projectDesc"></h4>
+                </div>
+                <form id="fizzBuzzData" action="">
+                    <span id="fizzBuzzReq">Enter 2 seperate, whole numbers less than 100, in ascending order, then turn on the 
+                        machine and stand back! <br><br> <p> (the generator will compose a list in which all numbers divisible by 3 will become "Fizz",
+                        all numbers divisible by 5 will become "Buzz", and all numbers divisible by both 3 & 5 will become "FizzBuzz".)</p>
+                    </span>
+                    <input class="fizzBuzzInput" id="fizz_Number1" type="number" name="number1" max="99" min="00" placeholder="example : 05">
+                    <input class="fizzBuzzInput" id="fizz_Number2" type="number" name="number1" max="99" min="00" placeholder="example : 87">
+                    <div id="fizzButtonWrapper">
+                        <button onclick="calculateFizzBuzz()" id="fizzButton" type="button">crank it up</button>
+                    </div>
+                    <div id="outputFizzBuzz">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
