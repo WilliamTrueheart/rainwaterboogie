@@ -214,7 +214,7 @@ header a {
 }
 
 #outputFizzBuzz {
-  width: 70vw;
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -223,7 +223,7 @@ header a {
   background-color: #282c34de;
   color: white;
   margin-top: 20px;
-  font-size: .8rem;
+  font-size: .7rem;
   border-radius: 8px;
 }
 
@@ -323,7 +323,7 @@ header a {
     width: 85%;
   }
   #sectionOneWrapper {
-    height: 550px;
+    height: 600px;
   }
   #outputFizzBuzz {
     width: 95%;
