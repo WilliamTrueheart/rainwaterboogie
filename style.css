@@ -100,6 +100,8 @@ header a {
   content: 'FizzBuzz';
   font-size: 1.5rem;
   color: white;
+  -webkit-animation: projectnameappear 1s;
+          animation: projectnameappear 1s;
 }
 
 #projectCarousel {
@@ -279,6 +281,30 @@ header a {
   }
 }
 
+@-webkit-keyframes projectnameappear {
+  from {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes projectnameappear {
+  from {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes fizzdata {
   from {
     opacity: 0;
@@ -323,7 +349,7 @@ header a {
     width: 85%;
   }
   #sectionOneWrapper {
-    height: 600px;
+    height: 670px;
   }
   #outputFizzBuzz {
     width: 95%;
